@@ -12,7 +12,7 @@ import {ClientService} from 'src/app/services/client.service';
 export class ClientListComponent implements OnInit {
 
   ELEMENT_DATA: Client[] = []
-  displayedColumns: string[] = ['id', 'nome', 'cpf', 'email', 'acoes'];
+  displayedColumns: string[] = ['id', 'nome', 'cpf', 'email', 'telephone', 'acoes',];
   dataSource = new MatTableDataSource<Client>(this.ELEMENT_DATA);
   @ViewChild(MatPaginator) paginator: MatPaginator;
 

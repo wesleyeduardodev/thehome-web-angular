@@ -1,17 +1,10 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
-// Para trabalhar com formulários no Angular 12
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-
-// Para realizar requisições HTTP
 import {HttpClientModule} from '@angular/common/http';
-
-// Imports para componentes do Angular Material
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
@@ -26,14 +19,12 @@ import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
-
-// Componentes do projeto
 import {NavComponent} from './components/nav/nav.component';
 import {HomeComponent} from './components/home/home.component';
 import {HeaderComponent} from './components/header/header.component';
 import {ClientListComponent} from './components/client/client-list/client-list.component';
 import {ClientCreateComponent} from "./components/client/client-create/client-create.component";
-
+import {ClientUpdateComponent} from "./components/client/client-update/client-update.component";
 
 @NgModule({
   declarations: [
@@ -42,18 +33,16 @@ import {ClientCreateComponent} from "./components/client/client-create/client-cr
     HomeComponent,
     HeaderComponent,
     ClientListComponent,
-    ClientCreateComponent
+    ClientCreateComponent,
+    ClientUpdateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    // Forms
     FormsModule,
     ReactiveFormsModule,
-    // Requisições http
     HttpClientModule,
-    // Angular Material
     MatFormFieldModule,
     MatPaginatorModule,
     MatCheckboxModule,
