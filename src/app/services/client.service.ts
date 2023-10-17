@@ -27,4 +27,8 @@ export class ClientService {
   update(cliente: Client): Observable<Client> {
     return this.http.put<Client>(`${API_CONFIG.baseUrl}/v1/clients/${cliente.id}`, cliente);
   }
+
+  delete(id: any): Observable<Client> {
+    return this.http.delete<Client>(`${API_CONFIG.baseUrl}/v1/clients//${id}`);
+  }
 }

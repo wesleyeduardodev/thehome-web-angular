@@ -25,6 +25,7 @@ import {HeaderComponent} from './components/header/header.component';
 import {ClientListComponent} from './components/client/client-list/client-list.component';
 import {ClientCreateComponent} from "./components/client/client-create/client-create.component";
 import {ClientUpdateComponent} from "./components/client/client-update/client-update.component";
+import {ClientDeleteComponent} from "./components/client/client-delete/cliente-delete.component";
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {ClientUpdateComponent} from "./components/client/client-update/client-up
     HeaderComponent,
     ClientListComponent,
     ClientCreateComponent,
-    ClientUpdateComponent
+    ClientUpdateComponent,
+    ClientDeleteComponent
   ],
   imports: [
     BrowserModule,
