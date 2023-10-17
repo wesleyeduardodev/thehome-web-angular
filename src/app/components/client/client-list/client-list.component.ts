@@ -26,7 +26,6 @@ export class ClientListComponent implements OnInit {
   }
 
   findAll() {
-    console.log('findAll');
     this.service.findAll().subscribe(response => {
       this.ELEMENT_DATA = response
       this.dataSource = new MatTableDataSource<Client>(response);

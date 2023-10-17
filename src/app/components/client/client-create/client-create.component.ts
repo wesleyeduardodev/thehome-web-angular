@@ -21,9 +21,9 @@ export class ClientCreateComponent implements OnInit {
   }
 
   name: FormControl = new FormControl(null, Validators.minLength(3));
-  cpf: FormControl = new FormControl(null, Validators.required);
+  cpf: FormControl = new FormControl(null, Validators.minLength(11));
   email: FormControl = new FormControl(null, Validators.email);
-  telephone: FormControl = new FormControl(null, Validators.minLength(9));
+  telephone: FormControl = new FormControl(null, Validators.minLength(11));
 
   constructor(
     private service: ClientService,
@@ -46,5 +46,9 @@ export class ClientCreateComponent implements OnInit {
 
       }
     })
+  }
+
+  isCamposValidos(): boolean {
+    return this.name.valid && this.cpf.valid && this.email.valid && this.telephone.valid
   }
 }
