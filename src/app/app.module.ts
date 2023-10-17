@@ -31,7 +31,7 @@ import {MatCardModule} from '@angular/material/card';
 import {NavComponent} from './components/nav/nav.component';
 import {HomeComponent} from './components/home/home.component';
 import {HeaderComponent} from './components/header/header.component';
-import {ClienteListComponent} from './components/cliente/cliente-list/cliente-list.component';
+import {ClientListComponent} from './components/client/client-list/client-list.component';
 
 
 @NgModule({
@@ -41,7 +41,7 @@ import {ClienteListComponent} from './components/cliente/cliente-list/cliente-li
     HomeComponent,
     HeaderComponent,
 
-    ClienteListComponent,
+    ClientListComponent,
 
   ],
   imports: [
