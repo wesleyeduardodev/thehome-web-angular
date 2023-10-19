@@ -40,17 +40,17 @@ export class ClientDeleteComponent implements OnInit {
   }
 
   delete(): void {
-    this.service.delete(this.client.id).subscribe(() => {
-      this.toast.success('Cliente removido com sucesso', 'Cadastro');
-      this.router.navigate(['clients'])
-    }, ex => {
-      if (ex.error.errors) {
-        ex.error.errors.forEach(element => {
-          this.toast.error(element.message);
-        });
-      } else {
-        this.toast.error(ex.message);
-      }
-    })
+    this.service.delete(this.client.id)
+      .subscribe(
+        {
+          next: () => {
+            this.toast.success('Cliente removido com sucesso', 'Cadastro');
+            this.router.navigate(['clients'])
+          },
+          error: (erro) => {
+            this.toast.error(erro.message);
+          }
+        }
+      );
   }
 }

@@ -47,24 +47,25 @@ export class ClientUpdateComponent implements OnInit {
 
   update(): void {
     this.normalizeFields();
-    this.service.update(this.client).subscribe(() => {
-      this.toast.success('Cliente atualizado com sucesso', 'Cadastro');
-      this.router.navigate(['clients'])
-    }, ex => {
-      if (ex.error.errors) {
-        ex.error.errors.forEach(element => {
-          this.toast.error(element.message);
-        });
-      } else {
-        this.toast.error(ex.message);
-      }
-    })
+    this.service.update(this.client)
+      .subscribe(
+        {
+          next: () => {
+            this.toast.success('Cliente atualizado com sucesso', 'Cadastro');
+            this.router.navigate(['clients'])
+          },
+          error: (erro) => {
+            this.toast.error(erro.message);
+          }
+        }
+      );
   }
 
   isCamposValidos(): boolean {
     return this.name.valid && this.cpf.valid && this.email.valid && this.telephone.valid
   }
 
+  //TODO Melhorar e incluir em uma class utilitária
   normalizeFields() {
     if (this.client.id != null && this.client.id.length == 0) {
       this.client.id = null;
