@@ -1,3 +1,3 @@
 export const API_CONFIG = {
-  baseUrl: 'https://thehome-a35c86dbe375.herokuapp.com/api'
+  baseUrl: 'https://thehome-c09b93f0e0dc.herokuapp.com/api'
 }
