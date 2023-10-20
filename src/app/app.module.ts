@@ -26,6 +26,7 @@ import {ClientListComponent} from './components/client/client-list/client-list.c
 import {ClientCreateComponent} from "./components/client/client-create/client-create.component";
 import {ClientUpdateComponent} from "./components/client/client-update/client-update.component";
 import {ClientDeleteComponent} from "./components/client/client-delete/cliente-delete.component";
+import {ToastrModule} from "ngx-toastr";
 
 @NgModule({
   declarations: [
@@ -58,7 +59,12 @@ import {ClientDeleteComponent} from "./components/client/client-delete/cliente-d
     MatTableModule,
     MatIconModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    ToastrModule.forRoot({
+      timeOut: 4000,
+      closeButton: true,
+      progressBar: true
+    }),
   ],
   bootstrap: [AppComponent]
 })

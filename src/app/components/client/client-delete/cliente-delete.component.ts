@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Client} from "../../../models/client";
 import {ClientService} from "../../../services/client.service";
+import {ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: 'app-cliente-delete',
@@ -22,6 +23,7 @@ export class ClientDeleteComponent implements OnInit {
   constructor(
     private service: ClientService,
     private router: Router,
+    private toast: ToastrService,
     private route: ActivatedRoute,
   ) {
   }
@@ -38,16 +40,17 @@ export class ClientDeleteComponent implements OnInit {
   }
 
   delete(): void {
-    this.service.delete(this.client.id).subscribe(() => {
-      this.router.navigate(['clients'])
-    }, ex => {
-      if (ex.error.errors) {
-        ex.error.errors.forEach(element => {
-
-        });
-      } else {
-
-      }
-    })
+    this.service.delete(this.client.id)
+      .subscribe(
+        {
+          next: () => {
+            this.toast.success('Cliente removido com sucesso', 'Cadastro');
+            this.router.navigate(['clients'])
+          },
+          error: (erro) => {
+            this.toast.error(erro.message);
+          }
+        }
+      );
   }
 }
