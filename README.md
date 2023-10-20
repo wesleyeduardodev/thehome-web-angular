@@ -1,3 +1,13 @@
+# Instação do Projeto
+- Instalar o nodeJs: https://nodejs.org/en. Versão usada para executar o projeto: 18.18.2
+- Verificar versão npm: npm -version
+- Intalar Angular CLI: npm install -g @angular/cli
+
+# Dados comando ng version
+Angular CLI: 16.2.7
+Node: 18.18.2
+Package Manager: npm 9.8.1
+
 # ThehomeWeb
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
