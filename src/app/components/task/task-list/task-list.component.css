@@ -3,16 +3,16 @@
   margin: auto;
 }
 
-.id{
-  width: 10%;
+.mat-column-id {
+  width: 15%;
 }
 
-.acoes{
-  width: 30%;
+.mat-column-nome {
+  width: 70%;
 }
-
-.nome{
-  width: 60%;
+.mat-column-acoes {
+  width: 15%;
+  text-align: center;
 }
 
 table {

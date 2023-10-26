@@ -3,6 +3,11 @@
   margin: auto;
 }
 
+.mat-column-acoes {
+  width: 15%;
+  text-align: center;
+}
+
 table {
   width: 100%;
 }
