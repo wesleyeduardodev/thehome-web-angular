@@ -12,6 +12,16 @@ import {ToastrService} from 'ngx-toastr';
 })
 export class ClientCreateComponent implements OnInit {
 
+  constructor(
+    private service: ClientService,
+    private toast: ToastrService,
+    private router: Router,
+  ) {
+  }
+
+  ngOnInit(): void {
+  }
+
   client: Client = {
     id: null,
     name: null,
@@ -26,17 +36,8 @@ export class ClientCreateComponent implements OnInit {
   email: FormControl = new FormControl(null, Validators.email);
   telephone: FormControl = new FormControl(null, Validators.minLength(11));
 
-  constructor(
-    private service: ClientService,
-    private toast: ToastrService,
-    private router: Router,
-  ) {
-  }
-
-  ngOnInit(): void {
-  }
-
   create(): void {
+    this.normalizeFields();
     this.service.create(this.client)
       .subscribe(
         {
@@ -54,7 +55,6 @@ export class ClientCreateComponent implements OnInit {
   isValidFields(): boolean {
     return this.name.valid && this.cpf.valid && this.email.valid && this.telephone.valid
   }
-
 
   //TODO Melhorar e incluir em uma class utilitária
   normalizeFields() {

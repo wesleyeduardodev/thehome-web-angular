@@ -27,6 +27,10 @@ import {ClientCreateComponent} from "./components/client/client-create/client-cr
 import {ClientUpdateComponent} from "./components/client/client-update/client-update.component";
 import {ClientDeleteComponent} from "./components/client/client-delete/cliente-delete.component";
 import {ToastrModule} from "ngx-toastr";
+import {TaskListComponent} from './components/task/task-list/task-list.component';
+import {TaskCreateComponent} from './components/task/task-create/task-create.component';
+import {TaskDeleteComponent} from "./components/task/task-delete/task-delete.component";
+import {TaskUpdateComponent} from "./components/task/task-update/task-update.component";
 
 @NgModule({
   declarations: [
@@ -37,7 +41,11 @@ import {ToastrModule} from "ngx-toastr";
     ClientListComponent,
     ClientCreateComponent,
     ClientUpdateComponent,
-    ClientDeleteComponent
+    ClientDeleteComponent,
+    TaskListComponent,
+    TaskCreateComponent,
+    TaskDeleteComponent,
+    TaskUpdateComponent
   ],
   imports: [
     BrowserModule,
