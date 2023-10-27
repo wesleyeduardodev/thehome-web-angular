@@ -3,10 +3,31 @@
   margin: auto;
 }
 
+.mat-column-id {
+  width: 10%;
+}
+
+.mat-column-nome {
+  width: 25%;
+}
+
+.mat-column-cpf {
+  width: 20%;
+}
+
+.mat-column-email {
+  width: 15%;
+}
+
+.mat-column-telephone {
+  width: 15%;
+}
+
 .mat-column-acoes {
   width: 15%;
   text-align: center;
 }
+
 
 table {
   width: 100%;
