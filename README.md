@@ -1,4 +1,6 @@
-# THE HOME WEB - Controle de Orçamentos - **EM DESENVOLVIMENTO**
+# THE HOME WEB - Controle de Orçamentos
+
+# **Projeto em Desenvolvimento**
 
 # LINKS DE PRODUÇÃO
 - Aplicação Quarkus: https://thehome-3a98079ba9ed.herokuapp.com/
