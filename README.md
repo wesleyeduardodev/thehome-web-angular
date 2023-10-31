@@ -2,10 +2,11 @@
 
 # **Projeto em Desenvolvimento**
 
-# LINKS DE PRODUÇÃO
+# LINKS GERAIS
 - Aplicação Quarkus: https://thehome-3a98079ba9ed.herokuapp.com/
 - Swagger: https://thehome-3a98079ba9ed.herokuapp.com/q/swagger-ui/
 - Aplicação Angular: https://thehome-web.vercel.app/home
+- Projeto Backend (Quarkus): https://github.com/wesleyeduardodev/thehome_api
 
 # Instação do Projeto
 - Instalar o nodeJs: https://nodejs.org/en. Versão usada para executar o projeto: 18.18.2
