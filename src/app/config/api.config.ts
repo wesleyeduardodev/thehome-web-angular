@@ -13,7 +13,7 @@ export const AUTHORIZATION_CONFIG = {
   headerOptions: {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
-      'Authorization': 'Basic ' + btoa("user_dev_test" + ':' + "password_dev_test")
+      'Authorization': 'Basic ' + btoa("prod" + ':' + "a78f0968f64223cc07c8b2e5325e1f3e")
     })
   }
 }
