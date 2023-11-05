@@ -1,8 +1,7 @@
 export interface Client {
   id?: any;
   name?: string;
-  cpf?: string;
-  cnpj?: string;
+  cpfCnpj?: string;
   telephone?: string;
   email?: string;
 }

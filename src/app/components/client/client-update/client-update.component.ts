@@ -15,14 +15,13 @@ export class ClientUpdateComponent implements OnInit {
   client: Client = {
     id: null,
     name: null,
-    cpf: null,
-    cnpj: null,
+    cpfCnpj: null,
     telephone: null,
     email: null
   }
 
   name: FormControl = new FormControl(null, Validators.minLength(3));
-  cpf: FormControl = new FormControl(null, Validators.minLength(11));
+  cpfCnpj: FormControl = new FormControl(null, Validators.minLength(11));
   email: FormControl = new FormControl(null, Validators.email);
   telephone: FormControl = new FormControl(null, Validators.minLength(11));
 
@@ -62,7 +61,7 @@ export class ClientUpdateComponent implements OnInit {
   }
 
   isCamposValidos(): boolean {
-    return this.name.valid && this.cpf.valid && this.email.valid && this.telephone.valid
+    return this.name.valid && this.cpfCnpj.valid && this.email.valid && this.telephone.valid
   }
 
   //TODO Melhorar e incluir em uma class utilitária
@@ -70,8 +69,8 @@ export class ClientUpdateComponent implements OnInit {
     if (this.client.id != null && this.client.id.length == 0) {
       this.client.id = null;
     }
-    if (this.client.cpf != null && this.client.cpf.length == 0) {
-      this.client.cpf = null;
+    if (this.client.cpfCnpj != null && this.client.cpfCnpj.length == 0) {
+      this.client.cpfCnpj = null;
     }
     if (this.client.email != null && this.client.email.length == 0) {
       this.client.email = null;
