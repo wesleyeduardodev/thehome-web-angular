@@ -17,10 +17,10 @@
     <mat-form-field class="fullWidth">
       <mat-label>CPF/CNPJ</mat-label>
       <input
-        name="cpf"
-        [(ngModel)]="client.cpf"
-        [formControl]="cpf"
-        maxlength="11"
+        name="cpfCnpj"
+        [(ngModel)]="client.cpfCnpj"
+        [formControl]="cpfCnpj"
+        maxlength="18"
         matInput>
       <mat-icon matSuffix>pin</mat-icon>
     </mat-form-field>
@@ -32,8 +32,7 @@
         name="email"
         [formControl]="email"
         matInput
-        maxlength="100"
-        placeholder="Ex.. fulano@mail.com">
+        maxlength="100">
       <mat-icon matSuffix>email</mat-icon>
     </mat-form-field>
 
@@ -45,8 +44,7 @@
         [formControl]="telephone"
         matInput
         maxlength="11"
-        mask="00.000000000"
-        placeholder="98981650805">
+        mask="00.000000000">
       <mat-icon matSuffix>phone</mat-icon>
     </mat-form-field>
 
