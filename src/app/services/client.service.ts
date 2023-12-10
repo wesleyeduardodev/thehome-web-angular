@@ -1,10 +1,10 @@
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import {API_CONFIG, AUTHORIZATION_CONFIG} from '../config/api.config';
 import {Client} from '../models/client';
 
-const PATH = '/v1/clients';
+const PATH = '/api/v1/clients';
 
 @Injectable({
   providedIn: 'root'

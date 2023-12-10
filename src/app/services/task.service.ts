@@ -4,7 +4,7 @@ import {Observable} from 'rxjs';
 import {API_CONFIG, AUTHORIZATION_CONFIG} from '../config/api.config';
 import {Task} from "../models/task";
 
-const PATH = '/v1/tasks';
+const PATH = '/api/v1/tasks';
 
 @Injectable({
   providedIn: 'root'
