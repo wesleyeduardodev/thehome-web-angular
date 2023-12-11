@@ -2,6 +2,10 @@
 
 # **Projeto em Desenvolvimento**
 
+# Geração da images
+- Geração da imagem: docker build -t wesleyeduardodev/thehome-angular .
+- Execução do container: docker run -p 4200:4200 --name thehome-angular-container wesleyeduardodev/thehome-angular
+
 # LINKS GERAIS
 - Aplicação Quarkus: https://thehome-3a98079ba9ed.herokuapp.com/
 - Swagger: https://thehome-3a98079ba9ed.herokuapp.com/q/swagger-ui/
